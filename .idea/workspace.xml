@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7a5ba630-89cb-4a9d-8393-d1a6124b1012" name="变更" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGame/ExplainLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Area/ExplainLeft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGame/ExplainRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Area/ExplainRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGame/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Area/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestGame/GameWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/MyGame/GameWindow.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -30,19 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/QWei/JavaT/TetrisGame",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/QWei/JavaT/TetrisGame&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="应用程序.GameWindow">
+}</component>
+  <component name="RunManager" selected="应用程序.MyGame.GameWindow">
     <configuration name="GameWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestGame.GameWindow" />
       <module name="TetrisGame" />
@@ -55,7 +64,7 @@
       <module name="TetrisGame" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyGame.*" />
+          <option name="PATTERN" value="Area.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,7 +103,33 @@
       <module name="TetrisGame" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyGame.*" />
+          <option name="PATTERN" value="Area.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyGame.GameWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyGame.GameWindow" />
+      <module name="TetrisGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Area.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyGame.GameWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyGame.GameWindow" />
+      <module name="TetrisGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Area.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.GameWindow" />
         <item itemvalue="应用程序.MyGame.GameWindow" />
+        <item itemvalue="应用程序.GameWindow" />
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.MyGame.GameWindow (2)" />
         <item itemvalue="应用程序.MyGame.GameWindow (1)" />
-        <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +161,8 @@
       <workItem from="1670419767520" duration="1371000" />
       <workItem from="1670491521329" duration="11264000" />
       <workItem from="1670551324181" duration="2197000" />
-      <workItem from="1670731767192" duration="409000" />
+      <workItem from="1670731767192" duration="1980000" />
+      <workItem from="1670734118100" duration="31070000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1670731846105</created>
@@ -135,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670731846105</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1">
+      <created>1670732466469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670732466469</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +189,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -155,6 +210,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TestGame/GameWindow.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
