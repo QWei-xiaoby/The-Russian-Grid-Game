@@ -248,11 +248,10 @@ public class GameWindow extends JFrame implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
         if (code == 65 || code == 37) {
-//            myMove(-1, 0);
             moveLeft();
 
         } else if (code == 68 || code == 39) {
-            myMove(1, 0);
+            moveRight();
         }
     }
 
@@ -265,7 +264,7 @@ public class GameWindow extends JFrame implements KeyListener {
         for (int i = x; i < x + 4; i++) {
             for (int j = y; j < y + 4; j++) {
                 //若此处有方块，并且左边也有
-                if ((rect & temp) != 0 && data[i - 1][j]) {
+                if ((rect & temp) != 0 && data[j][i-1]) {
                     return;
                 }
                 temp >>= 1;
@@ -278,6 +277,45 @@ public class GameWindow extends JFrame implements KeyListener {
         draw(x, y);
     }
 
+    private void moveRight() {
+        if (!running)
+            return;
+
+        int temp = 0x8000;
+        int m = y, n = x;
+        int num = 7;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if ((temp & rect) != 0) {
+                    if (n > num) {
+                        num = n;
+                    }
+                }
+                temp >>= 1;
+                n++;
+            }
+            m++;
+            n = n - 4;
+        }
+        if (num >= 10) {
+            return;
+        }
+        temp = 0x8000;
+        for (int i = x; i < x + 4; i++) {
+            for (int j = y; j < y + 4; j++) {
+                if ((rect & temp) != 0) {
+                    if (data[j][i+1]) {
+                        return;
+                    }
+                }
+                temp >>= 1;
+            }
+        }
+        clear(x, y);//可以进行右移操作时，清除右移前方块颜色
+        x++;
+        draw(x, y);//然后重新绘制右移后方块的图像
+
+    }
     private void myMove(int moveX, int moveY) {
         //到了最左边直接返回
         if (!running || x <= 1 && moveX < 0)
@@ -303,14 +341,6 @@ public class GameWindow extends JFrame implements KeyListener {
         y += moveY;
         draw(x, y);
     }
-
-    private void moveRight() {
-        if (!running || x >= 10)
-            return;
-
-
-    }
-
 
     //这两个先不写
     @Override

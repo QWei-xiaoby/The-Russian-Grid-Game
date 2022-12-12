@@ -19,12 +19,12 @@ public class GameWindow extends JFrame implements KeyListener {
         new GameWindow().go();
     }
 
-    public final JTextArea[][] grids;// 把整个界面变为一个文本区域，整个游戏在里面进行
-    public final int[][] data; // 对于每个格子的数据，1 代表有方块，0 代表为空白区
-    public final int[] allRect; // 所有的方块类型，用 16 个字节来存储，俄罗斯方块图形都是在 4*4 格子里
-    public final JLabel label; // 显示分数的标签
-    public final JLabel label1;// 显示游戏是否结束
-    public boolean running; // 全局布尔用于判断游戏是否结束
+    private final JTextArea[][] grids;// 把整个界面变为一个文本区域，整个游戏在里面进行
+    private final int[][] data; // 对于每个格子的数据，1 代表有方块，0 代表为空白区
+    private final int[] allRect; // 所有的方块类型，用 16 个字节来存储，俄罗斯方块图形都是在 4*4 格子里
+    private final JLabel label; // 显示分数的标签
+    private final JLabel label1;// 显示游戏是否结束
+    private boolean running; // 全局布尔用于判断游戏是否结束
 
 
 
@@ -265,8 +265,7 @@ public class GameWindow extends JFrame implements KeyListener {
                 Thread.sleep(1000);//每层延时 1 秒
                 if (canFall(x, y)) {// 如果不可以掉落
                     saveData(x, y);//把此方块区域 data[][]标志为 1，表示有数据
-                    //循环遍历 4 层，看是否有哪一层都有方块的情况，以便消除那一行方格和统计得分
-                    for (int k = x; k < x + 4; k++) {
+                    for (int k = x; k < x + 4; k++) {//循环遍历 4 层，看是否有哪一层都有方块的情况，以便消除那一行方格和统计得分
                         int sum = 0;
                         for (int j = 1; j <= 10; j++) {
                             if (data[k][j] == 1) {

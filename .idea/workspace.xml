@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a5ba630-89cb-4a9d-8393-d1a6124b1012" name="变更" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGame/ExplainLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Area/ExplainLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGame/ExplainRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Area/ExplainRight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGame/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Area/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestGame/GameWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +158,9 @@
       <workItem from="1670491521329" duration="11264000" />
       <workItem from="1670551324181" duration="2197000" />
       <workItem from="1670731767192" duration="1980000" />
-      <workItem from="1670734118100" duration="31070000" />
+      <workItem from="1670734118100" duration="32342000" />
+      <workItem from="1670811305210" duration="309000" />
+      <workItem from="1670844376611" duration="1534000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1670731846105</created>
@@ -178,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670732466469</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1">
+      <created>1670775281088</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670775281088</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,12 +220,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/TestGame/GameWindow.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/MyGame/GameWindow.java</url>
+          <line>266</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="x" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
