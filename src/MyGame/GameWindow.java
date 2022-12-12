@@ -281,8 +281,7 @@ public class GameWindow extends JFrame implements KeyListener {
         if (!running)
             return;
 
-        int temp = 0x8000;
-        int location = x;
+        //这段巧妙的代码可以得到当前方块的最右边在哪一列
         int rightLocation = 1;
         int tmp = 1;
         for (int i = 0; i < 4; i++) {
@@ -290,54 +289,31 @@ public class GameWindow extends JFrame implements KeyListener {
             || (rect & (tmp<<i+4)) != 0
             || (rect & (tmp<<i+8)) != 0
             || (rect & (tmp<<i+12)) != 0){
-                rightLocation = x+4-i;
+                rightLocation = x+3-i;
                 break;
             }
         }
 
+        //如果最右边的那个方块碰到了墙壁
+        if (rightLocation > 11)
+            ;
+//            return;
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if ((temp & rect) != 0 && location>rightLocation) {
-                    rightLocation = location;
-                }
-                temp >>= 1;
-                location++;
-            }
-            location -= 4;
-        }
-        
-        
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if ((temp & rect) != 0) {
-                    if (location > num) {
-                        num = location;
-                    }
-                }
-                temp >>= 1;
-                location++;
-            }
-            m++;
-            location = location - 4;
-        }
-        if (num >= 10) {
-            return;
-        }
-        temp = 0x8000;
+        int temp = 0x8000;
         for (int i = x; i < x + 4; i++) {
             for (int j = y; j < y + 4; j++) {
-                if ((rect & temp) != 0) {
-                    if (data[j][i+1]) {
-                        return;
-                    }
+                //若此处有方块，并且右边也有
+                if ((rect & temp) != 0 && data[j][i+1]) {
+                    return;
                 }
                 temp >>= 1;
             }
         }
-        clear(x, y);//可以进行右移操作时，清除右移前方块颜色
+        //没return说明能左移
+        //先清除当前图像，再在左一格绘制
+        clear(x, y);
         x++;
-        draw(x, y);//然后重新绘制右移后方块的图像
+        draw(x, y);
 
     }
     private void myMove(int moveX, int moveY) {
