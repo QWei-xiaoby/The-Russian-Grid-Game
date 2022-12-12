@@ -282,20 +282,44 @@ public class GameWindow extends JFrame implements KeyListener {
             return;
 
         int temp = 0x8000;
-        int m = y, n = x;
-        int num = 7;
+        int location = x;
+        int rightLocation = 1;
+        int tmp = 1;
+        for (int i = 0; i < 4; i++) {
+            if((rect & (tmp<<i)) != 0
+            || (rect & (tmp<<i+4)) != 0
+            || (rect & (tmp<<i+8)) != 0
+            || (rect & (tmp<<i+12)) != 0){
+                rightLocation = x+4-i;
+                break;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if ((temp & rect) != 0 && location>rightLocation) {
+                    rightLocation = location;
+                }
+                temp >>= 1;
+                location++;
+            }
+            location -= 4;
+        }
+        
+        
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 if ((temp & rect) != 0) {
-                    if (n > num) {
-                        num = n;
+                    if (location > num) {
+                        num = location;
                     }
                 }
                 temp >>= 1;
-                n++;
+                location++;
             }
             m++;
-            n = n - 4;
+            location = location - 4;
         }
         if (num >= 10) {
             return;

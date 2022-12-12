@@ -4,7 +4,6 @@
     <list default="true" id="7a5ba630-89cb-4a9d-8393-d1a6124b1012" name="变更" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestGame/GameWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="应用程序.MyGame.GameWindow">
+  <component name="RunManager" selected="应用程序.Main">
     <configuration name="GameWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestGame.GameWindow" />
       <module name="TetrisGame" />
@@ -135,9 +134,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.MyGame.GameWindow" />
         <item itemvalue="应用程序.GameWindow" />
-        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.MyGame.GameWindow (2)" />
         <item itemvalue="应用程序.MyGame.GameWindow (1)" />
       </list>
@@ -160,7 +159,7 @@
       <workItem from="1670731767192" duration="1980000" />
       <workItem from="1670734118100" duration="32342000" />
       <workItem from="1670811305210" duration="309000" />
-      <workItem from="1670844376611" duration="1534000" />
+      <workItem from="1670844376611" duration="3729000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1670731846105</created>
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670775281088</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1">
+      <created>1670847378603</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670847378603</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
