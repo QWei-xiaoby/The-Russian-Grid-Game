@@ -201,16 +201,31 @@ public class GameWindow extends JFrame implements KeyListener {
         }
     }
 
-    private void removeRow(int k) {
+    private void removeRow(int row) {
+        for (int i = row; i >= 1; i--) {
+            System.arraycopy(data[i - 1], 1, data[i], 1, 10);
+        }
+        refresh();// 刷新移除 row 行方块后的游戏主面板区域
+        score += 10;
+    }
 
-
+    private void refresh() {
+        for (int i = 1; i < 25; i++) {
+            for (int j = 1; j < 11; j++) {
+                if (data[i][j]) {//有方块的地方把方块设置为绿色
+                    text[i][j].setBackground(Color.red);
+                } else {//无方块的地方把方块设置为白色
+                    text[i][j].setBackground(Color.WHITE);
+                }
+            }
+        }
     }
 
     //判断下面有没有东西 ；有的话返回true
     public boolean isDropDown(int x, int y) {
-        int temp = 0x8000;//表示 1000 0000 0000 0000
-        for (int i = 0; i < 4; i++) {//循环遍历 16 个方格（4*4）
-            for (int j = 0; j < 4; j++) {
+        int temp = 0x8000;
+        for (int j = 0; j < 4; j++) {
+            for (int i = 0; i < 4; i++) {
                 //此处有方块,并且下一格data域已存在方块
                 if ((temp & rect) != 0 && data[y + 1][x]) {// 此处有方块时
                     return true;
@@ -242,8 +257,6 @@ public class GameWindow extends JFrame implements KeyListener {
 
 
     //键盘监听事件
-
-
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
@@ -252,7 +265,31 @@ public class GameWindow extends JFrame implements KeyListener {
 
         } else if (code == 68 || code == 39) {
             moveRight();
+        } else if (code == 83 || code == 40) {
+            moveDown();
         }
+
+    }
+
+    private void moveDown() {
+        if (!running || y > 20)
+            return;
+
+        int temp = 0x8000;
+        for (int i = x; i < x + 4; i++) {
+            for (int j = y; j < y + 4; j++) {
+                //若此处有方块，并且下边也有
+                if ((rect & temp) != 0 && data[j + 1][i]) {
+                    return;
+                }
+                temp >>= 1;
+            }
+        }
+        //没return说明能左移
+        //先清除当前图像，再在左一格绘制
+        clear(x, y);
+        y++;
+        draw(x, y);
     }
 
     private void moveLeft() {
@@ -264,7 +301,7 @@ public class GameWindow extends JFrame implements KeyListener {
         for (int i = x; i < x + 4; i++) {
             for (int j = y; j < y + 4; j++) {
                 //若此处有方块，并且左边也有
-                if ((rect & temp) != 0 && data[j][i-1]) {
+                if ((rect & temp) != 0 && data[j][i - 1]) {
                     return;
                 }
                 temp >>= 1;
@@ -285,62 +322,37 @@ public class GameWindow extends JFrame implements KeyListener {
         int rightLocation = 1;
         int tmp = 1;
         for (int i = 0; i < 4; i++) {
-            if((rect & (tmp<<i)) != 0
-            || (rect & (tmp<<i+4)) != 0
-            || (rect & (tmp<<i+8)) != 0
-            || (rect & (tmp<<i+12)) != 0){
-                rightLocation = x+3-i;
+            if ((rect & (tmp << i)) != 0
+                    || (rect & (tmp << i + 4)) != 0
+                    || (rect & (tmp << i + 8)) != 0
+                    || (rect & (tmp << i + 12)) != 0) {
+                rightLocation = x + 3 - i;
                 break;
             }
         }
 
         //如果最右边的那个方块碰到了墙壁
-        if (rightLocation > 11)
-            ;
-//            return;
+        if (rightLocation > 9)
+            return;
 
         int temp = 0x8000;
-        for (int i = x; i < x + 4; i++) {
-            for (int j = y; j < y + 4; j++) {
+
+        for (int j = y; j < y + 4; j++) {
+            for (int i = x; i < x + 4; i++) {
                 //若此处有方块，并且右边也有
-                if ((rect & temp) != 0 && data[j][i+1]) {
+                if (((rect & temp) != 0) && data[j][i + 1]) {
                     return;
                 }
                 temp >>= 1;
             }
         }
         //没return说明能左移
-        //先清除当前图像，再在左一格绘制
+        //先清除当前图像，再在右一格绘制
         clear(x, y);
         x++;
         draw(x, y);
-
     }
-    private void myMove(int moveX, int moveY) {
-        //到了最左边直接返回
-        if (!running || x <= 1 && moveX < 0)
-            return;
-        else if (x >= 10 && moveX > 0)
-            return;
 
-        //先判断能不能移动
-        int temp = 0x8000;
-        for (int i = x; i < x + 4; i++) {
-            for (int j = y; j < y + 4; j++) {
-                //若此处有方块，并且移动moveX,Y格后也有
-                if ((rect & temp) != 0 && data[i + moveX][j + moveY]) {
-                    return;
-                }
-                temp >>= 1;
-            }
-        }
-        //没return说明能左移
-        //先清除当前图像，再在左一格绘制
-        clear(x, y);
-        x += moveX;
-        y += moveY;
-        draw(x, y);
-    }
 
     //这两个先不写
     @Override

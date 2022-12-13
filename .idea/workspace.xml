@@ -4,7 +4,6 @@
     <list default="true" id="7a5ba630-89cb-4a9d-8393-d1a6124b1012" name="变更" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGame/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGame/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,8 +135,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.MyGame.GameWindow" />
-        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.GameWindow" />
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.MyGame.GameWindow (2)" />
         <item itemvalue="应用程序.MyGame.GameWindow (1)" />
       </list>
@@ -160,7 +159,8 @@
       <workItem from="1670731767192" duration="1980000" />
       <workItem from="1670734118100" duration="32342000" />
       <workItem from="1670811305210" duration="309000" />
-      <workItem from="1670844376611" duration="8459000" />
+      <workItem from="1670844376611" duration="12739000" />
+      <workItem from="1670927798551" duration="3909000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1670731846105</created>
@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670849662455</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1">
+      <created>1670859698405</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670859698405</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,16 +238,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="rightLocation &gt; 11" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/MyGame/GameWindow.java</url>
-          <line>297</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="x" language="JAVA" />
